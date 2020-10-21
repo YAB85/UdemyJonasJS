@@ -3,11 +3,11 @@
 
 //functions
 
-calculateAge(1965);
+/* calculateAge(1965);
 
 function calculateAge(year) {
     console.log(2016 - year);
-}
+} */
 
 
 
@@ -17,13 +17,13 @@ function calculateAge(year) {
 
 //retirement(1990);
 
-const retirement = function (year) {
+/* const retirement = function (year) {
     console.log(65 - (2016 - year));
 }
-
+ */
 // variables
 
-console.log(age);
+/* onsole.log(age);
 var age = 23;
 
 function foo() {
@@ -32,7 +32,7 @@ function foo() {
 }
 foo();
 console.log(age);
-
+ */
 
 
 
