@@ -63,12 +63,12 @@ const cutPieces = function (fruit) { */
 
 console.log(fruitProcessor(1, 5)); */
 
-const calcAverage = (a, b, c) => (a + b + c) / 3 ;
+/* const calcAverage = (a, b, c) => (a + b + c) / 3 ;
 
-console.log(calcAverage(3, 4, 5));
+console.log(calcAverage(3, 4, 5)); */
 
 //Test 1
-const scoreDolphins = calcAverage(44, 23, 71);
+/* const scoreDolphins = calcAverage(44, 23, 71);
 const scoreKoalas = calcAverage(65, 54, 49);
 
 console.log(scoreDolphins, scoreKoalas);
@@ -83,4 +83,76 @@ const checkWinner = function (avgDolphins, avgKoalas) {
         console.log('No team wins...');
     }
   }
-checkWinner(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas); */
+
+/* const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+for(let i = 0 ; i < years.length; i++){
+    let age = calcAge(years[i]);
+    let ages = [];
+    ages.push(age[i])
+    console.log(ages);
+} */
+
+
+/* years.forEach(el => {
+    const result = el * 3;
+    return result
+}) */
+
+
+/* const calcTips = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}; */
+
+/* const calcTips = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+
+const bills = [125, 555, 44];
+
+const tips = [calcTips(bills[0]), calcTips(bills[1]), calcTips(bills[2])];
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips);
+console.log(totals); */
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    /* calcAge: function (birthYear) {
+        return 2037 - birthYear;
+      } */
+    /* calcAge: function () {
+        console.log(this)
+        return 2037 - this.birthYear;
+    } */
+    calcAge: function () {
+        this.age =  2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} - old ${this.job}, and he has  ${this.hasDriversLicense ? 'a' : 'no'} driver's license`;
+    }
+};
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+//console.log(jonas['calcAge'](1991));
+
+console.log();
+console.log(jonas.getSummary());
