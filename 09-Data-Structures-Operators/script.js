@@ -36,6 +36,11 @@ const restaurant = {
       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 restaurant.orderDelivery({
@@ -113,7 +118,7 @@ console.log(i, k, z); */
 console.log(p, q, r);
  */
 
-const arr = [7, 8, 9];
+/* const arr = [7, 8, 9];
 
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
@@ -124,27 +129,27 @@ console.log(newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 
-console.log(newMenu);
+console.log(newMenu); */
 
 //Copy array
 
-const mainMenuCopy = [...restaurant.mainMenu];
+/* const mainMenuCopy = [...restaurant.mainMenu]; */
 
 //Join 2 arrays
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+/* const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-console.log(menu);
+console.log(menu); */
 
 //Iterables: arrays, strings, maps, sets. NOT objects
 
-const str = 'Jonas';
+/* const str = 'Jonas';
 
 const letters = [...str, ' ', 'S.'];
 
 console.log(letters);
 console.log(...str);
-console.log(...str);
+console.log(...str); */
 
 /* const ingredients = [
   prompt('Let`s make pasta! Ingredient 1?'),
@@ -156,7 +161,7 @@ restaurant.orderPasta(...ingredients); */
 
 //Objects
 
-const newRestaurant = { ...restaurant, founder: 'Guiseppe' };
+/* const newRestaurant = { ...restaurant, founder: 'Guiseppe' };
 console.log(newRestaurant);
 
 const restaurantCopy = { ...restaurant };
@@ -164,3 +169,44 @@ restaurantCopy.name = 'Ristorante Roma';
 
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+ */
+
+// Spread, because on Right side of =
+/* const arr = [1, 2, ...[3, 4]]; */
+
+//ReSt,
+/* const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+console.log(a, b, others); */
+
+/* const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+ */
+//Object
+/* const { sat, ...weekdays } = restaurant.openingHours;
+
+console.log(weekdays); */
+
+// 2) Functions
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let num of numbers) {
+    sum += num / numbers.length;
+  }
+  console.log(sum);
+};
+
+//add(2, 3);
+//add(5, 3, 7, 2);
+//add(8, 2, 5, 3, 2, 1, 4);
+
+const x = [2, 4, 85];
+
+add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderPizza('mushrooms');
